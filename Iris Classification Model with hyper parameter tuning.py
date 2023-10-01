@@ -22,7 +22,7 @@ model_params = {
         'model': svm.SVC(gamma='auto'),
         'params' : {
             'C' : [1,10,20],
-            'kernal': ['rbf', 'linear']
+            'kernel': ['rbf', 'linear']
         }
     },
     'logistic_regression':{
