@@ -82,7 +82,7 @@ print(f"Recall: {recall:.2f}")
 print(f"F1 Score: {f1:.2f}")
 
 # Iterate over each class
-classes = [0, 1, 2]  # Assuming 0, 1, and 2 are the class labels
+classes = [0, 1, 2]  
 plt.figure(figsize=(8, 6))
 
 for class_label in classes:
@@ -103,12 +103,11 @@ plt.ylabel('Precision')
 plt.title('Precision-Recall Curve for Each Class')
 plt.grid()
 plt.legend()
-# plt.show()
+plt.show()
 
-# Assuming you have 'best_svm' as your trained SVM model
-Iris_Classification = "Iris_classification_svm.pkl"
+# Iris_Classification = "Iris_classification_svm.pkl"
 
-# Save the model to a file
-joblib.dump(best_svm, Iris_Classification)
+# # Save the model to a file
+# joblib.dump(best_svm, Iris_Classification)
 
-print(f"Model saved as {Iris_Classification}")
+# print(f"Model saved as {Iris_Classification}")
