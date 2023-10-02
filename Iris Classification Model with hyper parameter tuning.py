@@ -9,6 +9,7 @@ from sklearn.metrics import accuracy_score
 from sklearn.metrics import confusion_matrix, precision_score, recall_score, f1_score
 import matplotlib.pyplot as plt
 from sklearn.metrics import precision_recall_curve
+import joblib
 
 iris = datasets.load_iris()
 # print(iris)
@@ -102,4 +103,12 @@ plt.ylabel('Precision')
 plt.title('Precision-Recall Curve for Each Class')
 plt.grid()
 plt.legend()
-plt.show()
+# plt.show()
+
+# Assuming you have 'best_svm' as your trained SVM model
+Iris_Classification = "Iris_classification_svm.pkl"
+
+# Save the model to a file
+joblib.dump(best_svm, Iris_Classification)
+
+print(f"Model saved as {Iris_Classification}")
